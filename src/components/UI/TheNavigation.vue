@@ -1,18 +1,15 @@
 <template>
   <nav>
-    <h3 to="/main">
-      <strong class="color-white">the</strong>
-      <strong class="color-blue">.portfolio()</strong>
-    </h3>
+    <router-link class="h3" to="/main">
+      <span class="color-white">the</span>
+      <span class="color-blue">.portfolio()</span>
+    </router-link>
     <ul>
       <div class="ul">
         <router-link to="/main" class="router-link">.main()</router-link>
         <router-link to="./about" class="router-link">.about()</router-link>
         <router-link to="" class="router-link">.skills()</router-link>
         <router-link to="" class="router-link">.contacts()</router-link>
-      <div class="burger-menu">
-        <i class="fas fa-bars"></i>
-      </div>
       </div>
     </ul>
   </nav>
@@ -24,33 +21,43 @@ nav {
   padding: 0;
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  width: 100%;
 }
 .router-link {
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   text-decoration: none;
   color: white;
   padding-left: 20px;
+  padding-top: 10px;
   font-family: var(--sub-font);
   transition: all 0.2s;
+  font-weight: 300;
 }
 .router-link:hover {
   color: var(--light-blue);
 }
 ul {
   margin: 0;
-  padding: 10px;
+  padding-right: 40px;
 }
-h3 {
+.h3 {
   margin: 0;
   padding: 10px;
   font-family: var(--sub-font);
   font-size: 1.5rem;
+  font-weight: 400;
+  text-decoration: none;
+  transition: 0.2s all;
+}
+.h3:hover{
+  transform: translateX(5px);
 }
 .fas {
   color: white;
   padding: 0 10px 0 20px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   transition: all 0.2s;
 }
 .fas:hover {
@@ -69,15 +76,15 @@ h3 {
   ul {
     display: none;
   }
+  .h3{
+    font-size: 1rem;
+    padding-top: 15px;
+  }
+ 
 }
 
 /* --- Mobile --- */
 @media screen and (max-width: 700px) {
 }
 
-@media screen and (min-width: 900) {
-  .burger-menu {
-    display: none;
-  }
-}
 </style>

@@ -4,6 +4,7 @@ import The404 from './components/pages/The404.vue'
 import MainPage from './components/pages/MainPage.vue'
 import AboutPage from './components/pages/AboutPage.vue'
 import TheNavigation from './components/UI/TheNavigation.vue'
+import TheMenu from './components/UI/TheMenu.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -18,5 +19,6 @@ const router = createRouter({
 
 const app = createApp(App);
 app.component('the-navigation', TheNavigation)
+app.component('the-menu', TheMenu)
 app.use(router)
 app.mount('#app')

@@ -5,6 +5,7 @@
     <header>
       <the-navigation class="navigation"></the-navigation>
     </header>
+    <the-menu class="the-menu"></the-menu>
     <router-view></router-view>
   </div>
 </template>
@@ -32,6 +33,10 @@ export default {
 .color-blue {
   color: var(--light-blue);
 }
+.color-grey{
+  color: var(--light-grey);
+}
+
 .app {
   position: relative;
   margin: 0;
@@ -61,6 +66,13 @@ h2 {
 .navigation {
   margin: 0;
 }
+.the-menu{
+  display: block;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+}
 
 
 .wrapper {
@@ -82,7 +94,7 @@ h2 {
 }
 
 /* --- Mobile --- */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
   .wrapper {
     width: 90%;
   }
