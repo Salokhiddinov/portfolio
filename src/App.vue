@@ -1,11 +1,16 @@
 <template>
   <div class="app">
-    <BaseGlitch class="base-glitch" />
-    <div class="base-black"></div>
+    <div class="glitch-wrapper">
+      <BaseGlitch class="base-glitch" />
+      <div class="base-black"></div>
+    </div>
     <header>
       <the-navigation class="navigation"></the-navigation>
     </header>
+  <div class="menu-wrapper">
     <the-menu class="the-menu"></the-menu>
+
+  </div>
     <router-view></router-view>
   </div>
 </template>
@@ -33,7 +38,7 @@ export default {
 .color-blue {
   color: var(--light-blue);
 }
-.color-grey{
+.color-grey {
   color: var(--light-grey);
 }
 
@@ -46,14 +51,18 @@ export default {
 h2 {
   color: white;
 }
-.base-glitch {
+.base-glitch,
+.glitch-wrapper {
   display: block;
-  position: absolute fixed;
+  position: absolute;
   z-index: -10;
   width: 100%;
   height: 100vh;
   margin: 0;
   padding: 0;
+}
+.glitch-wrapper {
+  position: fixed;
 }
 .base-black {
   display: block;
@@ -66,19 +75,49 @@ h2 {
 .navigation {
   margin: 0;
 }
-.the-menu{
+.the-menu,
+.menu-wrapper
+ {
   display: block;
   position: absolute;
   z-index: 100;
   width: 100%;
   height: 100vh;
 }
-
+.menu-wrapper{
+  position: fixed;
+}
 
 .wrapper {
   margin: 0 auto;
 }
+.h1 {
+  font-family: var(--sub-font) !important;
+  font-weight: 700;
+  font-size: 3rem;
+  animation: shake 1s ease infinite;
+}
+.h2 {
+  font-family: var(--sub-font);
+}
+.h2-larger{
+  font-size: 1.7rem;
+}
 
+
+.name {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+.desc {
+  width: 50%;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+.tab {
+  padding-left: 2rem;
+}
 /* --- Large Screens and Laptops --- */
 @media screen and (max-width: 2000px) {
   .wrapper {
@@ -91,12 +130,49 @@ h2 {
   .wrapper {
     width: 70%;
   }
+  .h1 {
+    font-size: 2.5rem;
+  }
+  .h2-larger{
+  font-size: 1.5rem;
+}
+  .name,
+  .desc {
+    font-size: 1.25rem;
+    width: 65%;
+  }
 }
 
 /* --- Mobile --- */
 @media screen and (max-width: 600px) {
   .wrapper {
     width: 90%;
+  }
+  .h1 {
+    font-size: 2rem;
+  }
+  .h2-larger{
+  font-size: 1.2rem;
+}
+  .name,
+  .desc {
+    font-size: 1rem;
+    width: 100%;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(1px);
+  }
+  66% {
+    transform: translateX(2px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 </style>

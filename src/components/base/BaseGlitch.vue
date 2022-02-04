@@ -1,11 +1,11 @@
 <template>
-  <canvas id="canvas"></canvas>
+  <canvas class="canvas"></canvas>
 </template>
 
 <script>
 export default {
   mounted() {
-    var canvas = document.getElementById("canvas"),
+    var canvas = document.querySelector(".canvas"),
       ctx = canvas.getContext("2d");
 
     function resize() {
@@ -44,7 +44,7 @@ export default {
 </script>
 
 <style scoped>
-#canvas {
+.canvas {
   position: absolute;
   top: 0;
   left: 0;

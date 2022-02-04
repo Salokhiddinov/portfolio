@@ -40,6 +40,7 @@ export default {
 .burger-menu {
   padding: 0;
   margin: 0;
+  
 }
 .menu-icon {
   position: absolute;
@@ -124,6 +125,7 @@ hr {
 @media screen and (min-width: 900px) {
   .menu-icon {
     display: none;
+    
   }
 }
 
