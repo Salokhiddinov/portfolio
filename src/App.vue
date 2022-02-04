@@ -7,10 +7,9 @@
     <header>
       <the-navigation class="navigation"></the-navigation>
     </header>
-  <div class="menu-wrapper">
+  
     <the-menu class="the-menu"></the-menu>
-
-  </div>
+  
     <router-view></router-view>
   </div>
 </template>
@@ -86,6 +85,7 @@ h2 {
 }
 .menu-wrapper{
   position: fixed;
+  z-index: 0 !important;
 }
 
 .wrapper {
@@ -116,7 +116,7 @@ h2 {
   line-height: 2rem;
 }
 .tab {
-  padding-left: 2rem;
+  margin-left: 2rem !important;
 }
 /* --- Large Screens and Laptops --- */
 @media screen and (max-width: 2000px) {

@@ -6,6 +6,10 @@ import AboutPage from './components/pages/AboutPage.vue'
 import TheNavigation from './components/UI/TheNavigation.vue'
 import TheMenu from './components/UI/TheMenu.vue'
 import { createRouter, createWebHistory } from 'vue-router'
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const router = createRouter({
     history: createWebHistory(),
